@@ -1,0 +1,121 @@
+// В этом файле должны быть стили для БЭМ-блока main, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.main {
+
+  $block-name:                &; // #{$block-name}__element
+
+}
+
+.logo {
+  img {
+    display: block;
+  }
+}
+
+.main-intro {
+  height: 1160px;
+  background-image: url(../img/main-intro-image.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.copyright {
+  text-align: center;
+  max-width: 220px;
+  margin: auto;
+
+  &__logo {
+    display: inline-block;
+  }
+  &__text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
+    color: #71717A;
+  }
+}
+
+.social {
+  text-align: right;
+
+  &__item {
+    display: inline-block;
+    margin: 8px;
+  }
+
+  &__link {
+    display: block;
+  }
+}
+
+.form-box {
+  background: rgba(44, 32, 120, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 20px;
+  padding: 90px;
+
+  &__line {
+    height: 1px;
+    width: 100%;
+    background: #4D32F4;
+    margin: 120px 0 80px;
+  }
+
+  &__inner {
+    max-width: 560px;
+    margin: auto;
+  }
+
+  &__header {
+    text-align: center;
+    padding: 0 90px;
+    margin-bottom: 45px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 74px;
+  }
+
+  &__text {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    margin-top: 30px;
+  }
+}
+
+.clients {
+
+  &__row {
+    @include row;
+    margin-left: -10px !important;
+    margin-right: -10px !important;
+  }
+
+  &__item {
+    @include col();
+    @include col(lg, 3);
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+    margin-bottom: 20px;
+  }
+}
+
+.client-logo {
+  background: rgba(15, 15, 21, 0.7);
+  backdrop-filter: blur(5px);
+  border: 1px solid #4D32F4;
+  display: block;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 15px;
+
+  img {
+  }
+}
