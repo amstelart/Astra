@@ -119,3 +119,246 @@
   img {
   }
 }
+
+.portfolio {
+
+  &__row {
+    @include row;
+  }
+
+  &__item {
+    @include col();
+    @include col(lg, 6);
+    margin-bottom: 40px;
+  }
+}
+
+.portfolio-card {
+
+  &__image {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 8px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    &:before {
+      content: "";
+      background: linear-gradient(360deg, #4D32F4 0%, rgba(77, 50, 244, 0.27) 38.5%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 48px;
+    line-height: 55px;
+    text-transform: uppercase;
+  }
+
+  &__caption {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    margin-bottom: 8px;
+  }
+
+  &__tag {
+    font-style: italic;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #4D32F4;
+  }
+}
+
+.advantage {
+  overflow: hidden;
+  border-radius: 10px;
+  margin-bottom: 260px;
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    background: rgba(44, 32, 120, 0.3);
+    margin-left: -1px;
+    margin-bottom: -1px;
+  }
+}
+
+.advantage-item {
+  flex: 0 0 33.333%;
+  display: flex;
+  flex-direction: column;
+  border-left: 1px solid #4D32F4;
+  border-bottom: 1px solid #4D32F4;
+  padding: 15px 75px 45px 45px;
+  min-height: 240px;
+
+  &__num {
+    color:#71717A;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 10px;
+  }
+
+  &__icon {
+
+  }
+
+  &__caption {
+    margin-top: auto;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+  }
+}
+
+.stats-num {
+
+  &__row {
+    @include row;
+  }
+
+  &__item {
+    @include col();
+    @include col(lg, 4);
+
+    margin-bottom: 40px;
+  }
+}
+
+.stats-num-card {
+  background: #0F0F15;
+  border-radius: 20px;
+  color: #fff;
+  padding: 45px 60px 90px 60px;
+  text-align: center;
+  height: 100%;
+
+  &__num {
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 147px;
+  }
+
+  &__name {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    color: #D4D4D4;
+  }
+}
+
+.tools {
+
+  &__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  &__item {
+    margin-bottom: 60px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+    flex: 0 0 14%;
+  }
+
+  &__icon {
+    min-height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    span {
+      display: inline-block;
+    }
+
+    .icon-01 {
+      @include sprite($tools-icon-01);
+    }
+    .icon-02 {
+      @include sprite($tools-icon-02);
+    }
+    .icon-03 {
+      @include sprite($tools-icon-03);
+    }
+    .icon-04 {
+      @include sprite($tools-icon-04);
+    }
+    .icon-05 {
+      @include sprite($tools-icon-05);
+    }
+    .icon-06 {
+      @include sprite($tools-icon-06);
+    }
+    .icon-07 {
+      @include sprite($tools-icon-07);
+    }
+    .icon-08 {
+      @include sprite($tools-icon-08);
+    }
+    .icon-09 {
+      @include sprite($tools-icon-09);
+    }
+    .icon-10 {
+      @include sprite($tools-icon-10);
+    }
+    .icon-11 {
+      @include sprite($tools-icon-11);
+    }
+    .icon-12 {
+      @include sprite($tools-icon-12);
+    }
+    .icon-13 {
+      @include sprite($tools-icon-13);
+    }
+    .icon-14 {
+      @include sprite($tools-icon-14);
+    }
+  }
+
+  &__name {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 28px;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}
+
+.brain {
+  h2 {
+    text-align: center;
+  }
+}
+
+.brain-box {
+  margin: auto;
+  text-align: center;
+
+  p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21px;
+    color: #D4D4D4;
+    max-width: 300px;
+    margin: 0 auto 40px auto;
+  }
+}

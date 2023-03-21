@@ -92,5 +92,43 @@ $field-padding-horizontal:    0.7em !default;
       }
     }
   }
+
+  &--main {
+
+    #{$block-name}__links {
+      &:after {
+        display: none;
+      }
+    }
+
+    #{$block-name}__link-wrap {
+      flex: 0 0 25%;
+
+      &--active {
+
+        #{$block-name}__link {
+          color: #fff;
+        }
+      }
+    }
+
+    #{$block-name}__link {
+      background: rgba(44, 32, 120, 0.5);
+      color: #71717A;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: center;
+    }
+
+    #{$block-name}__content-wrapper {
+      display: block;
+      padding: 45px 0;
+      border: none;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 23px;
+    }
+  }
 }
 
