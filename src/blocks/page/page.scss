@@ -28,6 +28,10 @@
 
   &__content {
     flex-grow: 1;
+
+    main {
+      padding-bottom: 90px;
+    }
   }
 
   &__footer-wrapper {

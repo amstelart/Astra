@@ -63,6 +63,8 @@
     "postcss-inline-svg": "^3.0.0",
     "postcss-object-fit-images": "^1.1.2",
     "stylelint": "^8.2.0",
+    "t-aria-accordion": "^2.0.0",
+    "t-aria-tabs": "^2.0.3",
     "vinyl-buffer": "^1.0.0",
     "yaspeller": "^4.0.0"
   },

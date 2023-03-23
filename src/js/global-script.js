@@ -1,7 +1,10 @@
 // Если на проекте jQuery
-// $( document ).ready(function() {
-//   // code
-// });
+$( document ).ready(function() {
+  // code
+  $('.accordion-group').ariaAccordion({});
+
+  $('.tab-group').ariaTabs({});
+});
 
 // Изоляция без jQuery
 // (function(){

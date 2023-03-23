@@ -1,0 +1,101 @@
+// В этом файле должны быть стили для БЭМ-блока tab-group, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.tab-group {
+
+  $block-name:                &; // #{$block-name}__element
+
+}
+
+.tab-group {
+  padding-bottom: 0.3rem;
+  padding-top: 0.3rem;
+}
+
+.tab-group__tab-ul {
+  list-style: none;
+  background: rgba(44, 32, 120, 0.5);
+  border-radius: 10px;
+  align-items: flex-end;
+  flex-wrap: nowrap;
+  justify-content: center;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  // height: 3rem;
+}
+
+.tab-group__tab-li {
+  flex: 0 1 auto;
+
+  &:not(:last-child) {
+    border-right: 1px solid #4D32F4;
+  }
+}
+
+.tab-group__tab-btn {
+  background-color: transparent;
+  border-color: transparent;
+  border-radius: 0;
+  border-width: 0 0 0.3rem 0;
+  color: #71717A;
+  font-size: 0.9rem;
+  margin: 0;
+  padding: 3rem 1rem;
+  height: 100%;
+  min-width: 5rem;
+  width: 100%;
+  cursor: pointer;
+}
+.tab-group__tab-icon {
+  margin-bottom: 17px;
+  svg {
+    fill: #71717A;
+  }
+}
+.tab-group__tab-title {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 18px;
+}
+.tab-group__tab-btn:focus, .tab-group__tab-btn:hover {
+  // color: #202020;
+}
+.tab-group__tab-btn:focus {
+  outline: none;
+}
+
+.tab-group__tabpanel {
+  // border-color: #e0dddd;
+  // border-style: solid;
+  // border-width: 0 0.05rem 0.05rem 0.05rem;
+}
+
+.tab-group__tab-content {
+  padding: 1rem 0;
+}
+
+.tab-group__tab-content-action {
+  text-align: center;
+  margin-top: 110px;
+}
+
+.tab-group__tab-li_fill {
+  flex: 1 1 auto;
+}
+
+.tab-group__tab-btn_selected {
+  border-color: #FA00FF;
+  color: #fff;
+
+  .tab-group__tab-icon {
+    svg {
+      fill: #fff;
+    }
+  }
+}
+.tab-group__tab-btn_selected:focus, .tab-group__tab-btn_selected:hover {
+  color: #fff;
+}
+

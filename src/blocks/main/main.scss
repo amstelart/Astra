@@ -15,10 +15,75 @@
 }
 
 .main-intro {
-  height: 1160px;
+  min-height: 980px;
   background-image: url(../img/main-intro-image.jpg);
   background-repeat: no-repeat;
   background-position: center;
+
+  &__inner {
+    padding-top: 220px;
+
+    h1 {
+      max-width: 820px;
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 83px;
+    }
+    p {
+      max-width: 480px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+    }
+    .btn {
+      margin-top: 140px;
+    }
+  }
+}
+
+.page-intro {
+  overflow: hidden;
+  min-height: 635px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__inner {
+    padding-top: 220px;
+
+    h1 {
+      max-width: 820px;
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 83px;
+      margin-bottom: 0;
+    }
+    p {
+      max-width: 480px;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 21px;
+    }
+    .btn {
+      margin-top: 140px;
+    }
+  }
+}
+
+.page-box {
+  padding: 120px 0;
+}
+
+.brain {
+  padding: 120px 0;
+
+  h2 {
+    text-align: center;
+  }
+}
+
+.clients-box {
+  padding: 120px 0;
 }
 
 .copyright {
@@ -343,12 +408,6 @@
   }
 }
 
-.brain {
-  h2 {
-    text-align: center;
-  }
-}
-
 .brain-box {
   margin: auto;
   text-align: center;
@@ -361,4 +420,68 @@
     max-width: 300px;
     margin: 0 auto 40px auto;
   }
+}
+
+.info-group {
+
+  &__section {
+
+    margin: 100px 0;
+
+    &:not(:first-child) {
+      border-top: 1px solid #4D32F4;
+      padding-top: 100px;
+    }
+  }
+
+  &__row {
+    display: flex;
+    margin: 0 -20px;
+  }
+
+  &__col {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0 20px;
+  }
+}
+
+.action-box {
+  background: rgba(44, 32, 120, 0.5);
+  border-radius: 10px;
+  padding: 50px 120px;
+  text-align: center;
+  margin: 60px 0;
+
+  &__title {
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 74px;
+    margin-bottom: 90px;
+  }
+
+  .btn {
+    min-width: 370px;
+  }
+}
+
+
+.m-0 {
+  margin: 0;
+}
+
+.mt-0 {
+  margin-top: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
+.pb-0 {
+  padding-bottom: 0;
 }
