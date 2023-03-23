@@ -1,0 +1,121 @@
+// В этом файле должны быть стили для БЭМ-блока v-tab-group, его элементов,
+// модификаторов, псевдоселекторов, псевдоэлементов, @media-условий...
+// Очередность: http://nicothin.github.io/idiomatic-pre-CSS/#priority
+
+.v-tab-group {
+
+  $block-name:                &; // #{$block-name}__element
+
+  display: flex;
+  margin: 35px 0;
+
+  &__tab-nav {
+    flex-shrink: 0;
+    width: 500px;
+  }
+
+  &__tabs-cont {
+    flex-grow: 1;
+    padding-left: 100px;
+  }
+
+  &__tab-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background: rgba(44, 32, 120, 0.5);
+    border-radius: 10px;
+  }
+
+  &__tab-li {
+    &:not(:last-child) {
+      border-bottom: 1px solid #4D32F4;
+    }
+  }
+
+  &__tab-btn {
+    position: relative;
+    display: flex;
+    min-width: 100%;
+    border: 0;
+    background: transparent;
+    color: #fff;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    padding: 40px 50px;
+  }
+
+  &__tab-num {
+    color: #71717A;
+    width: 90px;
+    flex-shrink: 0;
+    margin-right: 10px;
+    text-align: left;
+  }
+
+  &__tab-title {
+    text-align: left;
+  }
+
+  &__tab-btn_selected {
+
+    &:before {
+      content: "";
+      height: 67px;
+      width: 11px;
+      background: linear-gradient(249.13deg, #4D32F4 0%, #FA00FF 98.09%);
+      border-radius: 20px;
+      position: absolute;
+      right: -6px;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .v-tab-group__tab-title {
+      padding-left: 30px;
+    }
+  }
+}
+
+
+.idea-box {
+
+  &__header {
+    position: relative;
+    background: linear-gradient(249.13deg, #4D32F4 0%, #FA00FF 98.09%);
+    background: rgba(15, 15, 21, 0.7);
+    backdrop-filter: blur(5px);
+    border-radius: 10px;
+    padding: 20px 20px 20px 118px;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 37px;
+    min-height: 157px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+
+    &:before {
+      content: "";
+      width: 74px;
+      height: 74px;
+      background-image: url(../img/idea-icon.svg);
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      top: 50%;
+      left: 23px;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__caption {
+    border-radius: 10px;
+    background: rgba(44, 32, 120, 0.5);
+    padding: 15px 34px;
+    font-size: 18px;
+    line-height: 21px;
+    color: #D4D4D4;
+  }
+}
