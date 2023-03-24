@@ -46,7 +46,38 @@
     <div class="page__content">
       <header class="page-header" role="banner">
         <div class="container">
-          <a href="index.html" class="logo"><img src="img/logo.png" alt></a>
+          <nav id="main-nav" class="main-nav" role="navigation">
+            <a href="index.html" class="logo"><img src="img/logo.png" alt></a>
+            <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item  main-nav__item--active">
+                <a href="index.html" class="main-nav__link">
+                  Home
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="services.html" class="main-nav__link">
+                  Services
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="technologies.html" class="main-nav__link">
+                  Technology stack
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Portfolio
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="about.html" class="main-nav__link">
+                  About us
+                </a>
+              </li>
+            </ul>
+            <a href="#" class="btn btn--contacts">Contact us</a>
+          </nav>
         </div>
       </header>
       <main role="main">
@@ -280,12 +311,8 @@
                 </header>
                 <div class="accordion-group__accordion-panel">
                   <div class="accordion-group__accordion-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                      ex ea commodo consequat. Duis aute
-                      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <button type="button">Test focus</button>
+                    <p>Astrolab is a comprehensive mobile app development company that offers premium post-launch support to help you scale your app over its lifetime. With premium maintenance, your app will continue to be successful long after it has been released.</p>
+                    <p>Having access to premium support services means having a knowledgeable team at your disposal at all times, whether you need advice on what features your app should add next, help staying abreast of industry trends, want to brainstorm some fresh ideas for your app, or need assistance.</p>
                   </div>
                 </div>
               </section>
@@ -295,12 +322,8 @@
                 </header>
                 <div class="accordion-group__accordion-panel">
                   <div class="accordion-group__accordion-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                      ex ea commodo consequat. Duis aute
-                      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <button type="button">Test focus</button>
+                    <p>Astrolab is a comprehensive mobile app development company that offers premium post-launch support to help you scale your app over its lifetime. With premium maintenance, your app will continue to be successful long after it has been released.</p>
+                    <p>Having access to premium support services means having a knowledgeable team at your disposal at all times, whether you need advice on what features your app should add next, help staying abreast of industry trends, want to brainstorm some fresh ideas for your app, or need assistance.</p>
                   </div>
                 </div>
               </section>
@@ -310,26 +333,22 @@
                 </header>
                 <div class="accordion-group__accordion-panel">
                   <div class="accordion-group__accordion-content">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-                      dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-                      ex ea commodo consequat. Duis aute
-                      irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                      sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                    <button type="button">Test focus</button>
+                    <p>Astrolab is a comprehensive mobile app development company that offers premium post-launch support to help you scale your app over its lifetime. With premium maintenance, your app will continue to be successful long after it has been released.</p>
+                    <p>Having access to premium support services means having a knowledgeable team at your disposal at all times, whether you need advice on what features your app should add next, help staying abreast of industry trends, want to brainstorm some fresh ideas for your app, or need assistance.</p>
                   </div>
                 </div>
               </section>
             </div>
           </div>
         </section>
-        <section>
+        <section class="page-box">
           <div class="container">
             <div class="form-box">
+              <div class="form-box__header">
+                <div class="form-box__title">Make your first step today and contact us!</div>
+                <div class="form-box__text">Develop web services and mobile applications on your demand.Let's do this.</div>
+              </div>
               <div class="form-box__inner">
-                <div class="form-box__header">
-                  <div class="form-box__title">Make your first step today and contact us!</div>
-                  <div class="form-box__text">Develop web services and mobile applications on your demand.Let's do this.</div>
-                </div>
                 <form action>
                   <label class="field-text">
                     <span class="field-text__input-wrap">
@@ -348,7 +367,7 @@
                   </label>
                   <label class="field-text">
                     <span class="field-text__input-wrap">
-                      <input class="field-text__input" type="text" placeholder="Your message*" id name>
+                      <textarea class="field-text__input" type="text" placeholder="Your message*" id name cols="30" rows="10"></textarea>
                     </span>
                   </label>
                   <button class="btn btn--violet btn--fw" type="submit">Send</button>

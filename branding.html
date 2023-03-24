@@ -46,7 +46,38 @@
     <div class="page__content">
       <header class="page-header" role="banner">
         <div class="container">
-          <a href="index.html" class="logo"><img src="img/logo.png" alt></a>
+          <nav id="main-nav" class="main-nav" role="navigation">
+            <a href="index.html" class="logo"><img src="img/logo.png" alt></a>
+            <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+            <ul class="main-nav__list">
+              <li class="main-nav__item  main-nav__item--active">
+                <a href="index.html" class="main-nav__link">
+                  Home
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="services.html" class="main-nav__link">
+                  Services
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="technologies.html" class="main-nav__link">
+                  Technology stack
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">
+                  Portfolio
+                </a>
+              </li>
+              <li class="main-nav__item">
+                <a href="about.html" class="main-nav__link">
+                  About us
+                </a>
+              </li>
+            </ul>
+            <a href="#" class="btn btn--contacts">Contact us</a>
+          </nav>
         </div>
       </header>
       <main role="main">
