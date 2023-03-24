@@ -9,11 +9,16 @@
 }
 
 .accordion-group {
-  padding: 1rem 0;
+  background: rgba(44, 32, 120, 0.5);
 }
 
 .accordion-group__accordion {
   margin: 0 0 0.25rem 0;
+  border-top: 1px solid #4D32F4;
+
+  &:last-child {
+    border-bottom: 1px solid #4D32F4;
+  }
 }
 
 .accordion-group__accordion-heading {
@@ -21,39 +26,70 @@
 }
 
 .accordion-group__accordion-btn {
-  background-color: #e2e2e2;
-  border-color: #ccc;
-  border-radius: 0.3rem;
-  border-style: solid;
-  border-width: 0.05rem;
+  background: transparent;
+  border: none;
   display: block;
-  font-size: 1rem;
-  padding: 0.5rem 1rem;
-  color: #000;
+  padding: 25px 60px;
+  color: #fff;
   text-align: left;
   width: 100%;
+  font-weight: 700;
+  font-size: 48px;
+  position: relative;
+
+  @media (max-width:$screen-xl) {
+    font-size: 32px;
+  }
+  @media (max-width:$screen-md) {
+    padding: 15px 25px;
+    font-size: 22px !important;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    right: 45px;
+    width: 40px;
+    height: 40px;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgeTE9IjE5IiB4Mj0iNDAiIHkyPSIxOSIgc3Ryb2tlPSIjNzE3MTdBIiBzdHJva2Utd2lkdGg9IjIiLz4KPGxpbmUgeDE9IjIxIiB5MT0iNC4zNzExNGUtMDgiIHgyPSIyMSIgeTI9IjQwIiBzdHJva2U9IiM3MTcxN0EiIHN0cm9rZS13aWR0aD0iMiIvPgo8L3N2Zz4K);
+    background-repeat: no-repeat;
+    background-size: contain;
+    cursor: pointer;
+
+    @media (max-width:$screen-md) {
+      width: 30px;
+      height: 30px;
+      right: 25px;
+    }
+  }
 }
 .accordion-group__accordion-btn:focus {
-  background-color: #bbc8d2;
-  border-color: #577b80;
-  border-radius: 0.3rem;
-  border-style: solid;
-  border-width: 0.05rem;
+  // background-color: #bbc8d2;
+  // border-color: #577b80;
+  // border-radius: 0.3rem;
+  // border-style: solid;
+  // border-width: 0.05rem;
 }
 
 .accordion-group__accordion-panel {
-  border-color: #ccc;
-  border-radius: 0 0 0.3rem 0.3rem;
-  border-style: solid;
-  border-width: 0 0.05rem 0.05rem 0.05rem;
-  padding: 0.5rem 1rem;
+  padding: 10px 60px 35px 60px;
+  color: #D4D4D4;
+
+  @media (max-width:$screen-md) {
+    padding: 10px 25px 25px 25px;
+  }
 }
 
 .accordion-group__accordion-btn_expanded {
-  background-color: #bbc8d2;
-  border-color: #ccc;
-  border-radius: 0.3rem;
-  border-style: solid;
-  border-width: 0.05rem;
+  // background-color: #bbc8d2;
+  // border-color: #ccc;
+  // border-radius: 0.3rem;
+  // border-style: solid;
+  // border-width: 0.05rem;
+  &:before {
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHZpZXdCb3g9IjAgMCA0MCA0MCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGxpbmUgeTE9IjE5IiB4Mj0iNDAiIHkyPSIxOSIgc3Ryb2tlPSIjNzE3MTdBIiBzdHJva2Utd2lkdGg9IjIiLz4KPC9zdmc+Cg==);
+  }
 }
 

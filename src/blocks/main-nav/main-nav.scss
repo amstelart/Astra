@@ -23,6 +23,15 @@ $transition-time:             0.3s !default;
 
   position: relative;
   z-index: 10;
+  display: flex;
+  align-items: center;
+
+  .logo {
+    margin-right: auto;
+  }
+  .btn--contacts {
+    margin-left: 50px;
+  }
 
   // первый уровень
   &__list {
@@ -56,6 +65,7 @@ $transition-time:             0.3s !default;
 
   &__item {
     position: relative;
+    margin: 0 8px;
 
     &--active {
 
@@ -69,7 +79,11 @@ $transition-time:             0.3s !default;
     display: block;
     padding: 0.5em;
     text-decoration: none;
-    background-color: #fff;
+    background-color: transparent;
+    color: #fff;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 18px;
 
     &:hover,
     &:focus {

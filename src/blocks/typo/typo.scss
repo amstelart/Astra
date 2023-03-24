@@ -10,9 +10,9 @@ $font-family--headings:       $font-family !default;
 $font-family--monospace:      'Menlo', 'Monaco', 'Consolas', 'Liberation Mono', 'Courier New', monospace !default;
 
 $font-size:                   14px !default;
-$font-size--h1:               2.25em !default;
-$font-size--h2:               1.875em !default;
-$font-size--h3:               1.5em !default;
+$font-size--h1:               72px;
+$font-size--h2:               64px;
+$font-size--h3:               48px;
 $font-size--h4:               1.25em !default;
 $font-size--h5:               1em !default;
 $font-size--h6:               1em !default;
@@ -46,6 +46,16 @@ body {
   font-size: $font-size;
   line-height: $line-height;
   color: $text-color;
+
+  @media (max-width: $screen-lg) {
+    font-size: 18px;
+    line-height: 1.3;
+  }
+
+  @media (max-width: $screen-md) {
+    font-size: 16px !important;
+    line-height: 1.4;
+  }
 }
 
 // .h1,
@@ -89,16 +99,37 @@ h6 {
 // .h1,
 h1 {
   font-size: $font-size--h1;
+
+  @media (max-width: $screen-lg) {
+    font-size: 54px;
+    line-height: 1.2;
+  }
 }
 
 // .h2,
 h2 {
   font-size: $font-size--h2;
+  line-height: 1.2;
+
+  @media (max-width: $screen-xxl) {
+    font-size: 48px;
+  }
+  @media (max-width: $screen-lg) {
+    font-size: 32px !important;
+  }
 }
 
 // .h3,
 h3 {
   font-size: $font-size--h3;
+  line-height: 1.2;
+
+  @media (max-width: $screen-xxl) {
+    font-size: 36px;
+  }
+  @media (max-width: $screen-lg) {
+    font-size: 28px !important;
+  }
 }
 
 // .h4,
@@ -125,8 +156,9 @@ blockquote,
 pre,
 address,
 figure {
+  line-height: 1.25;
   margin-top: ($line-height / 2);
-  margin-bottom: ($line-height / 2);
+  margin-bottom: ($line-height / 1.25);
 }
 
 address {
@@ -148,6 +180,7 @@ ul ol {
 
 li {
   line-height: inherit;
+  margin-bottom: 1em;
 }
 
 dt {
