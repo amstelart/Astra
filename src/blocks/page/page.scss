@@ -31,6 +31,10 @@
 
     main {
       padding-bottom: 90px;
+
+      @media (max-width: $screen-lg) {
+        padding-bottom: 40px;
+      }
     }
   }
 

@@ -28,6 +28,25 @@
     font-weight: 700;
     font-size: 18px;
     line-height: 21px;
+
+    &.email-link {
+      text-align: right;
+
+      a {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 21px;
+        display: inline-block;
+        margin-top: 10px;
+        color: #4D32F4;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      margin-bottom: 45px;
+    }
   }
 
   &__links {
