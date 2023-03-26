@@ -24,6 +24,10 @@
   margin: 0;
   padding: 0;
   // height: 3rem;
+
+  @media (max-width: $screen-lg) {
+    flex-wrap: wrap;
+  }
 }
 
 .tab-group__tab-li {
@@ -32,6 +36,18 @@
 
   &:not(:last-child) {
     border-right: 1px solid #4D32F4;
+  }
+
+  @media (max-width: $screen-lg) {
+    flex: 0 0 50%;
+
+    &:nth-child(1) {
+      border-bottom: 1px solid #4D32F4;
+    }
+    &:nth-child(2) {
+      border-right: 0;
+      border-bottom: 1px solid #4D32F4;
+    }
   }
 }
 

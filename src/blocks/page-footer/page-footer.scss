@@ -8,6 +8,10 @@
 
   padding: 90px 0;
 
+  background-image: url(../img/ellipse-footer.svg);
+  background-repeat: no-repeat;
+  background-position: left bottom;
+
   &__row  {
     @include row;
   }
@@ -62,6 +66,10 @@
     a {
       color:#71717A;
       text-decoration: none;
+
+      &:hover {
+        color: #fff;
+      }
     }
   }
 }

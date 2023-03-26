@@ -13,7 +13,7 @@ $screen-xxl:                  1800px !default;
 
 $menu-desktop-width:          $screen-xl !default;
 $toggler-part-height:         3px !default;
-$toggler-part-bg-color:       #000 !default;
+$toggler-part-bg-color:       #fff;
 
 $transition-time:             0.3s !default;
 
@@ -23,8 +23,10 @@ $transition-time:             0.3s !default;
 
   position: relative;
   z-index: 10;
-  display: flex;
-  align-items: center;
+  .container {
+    display: flex;
+    align-items: center;
+  }
 
   .logo {
     margin-right: auto;
@@ -41,6 +43,12 @@ $transition-time:             0.3s !default;
 
     // мобильный вид списка
     @media (max-width: ($menu-desktop-width - 1)) {
+      position: absolute;
+      top: calc(100% + 19px);
+      left: 0;
+      right: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.9);
 
       // открытие/закрытие меню только в случае работающего JS
 
@@ -67,10 +75,23 @@ $transition-time:             0.3s !default;
     position: relative;
     margin: 0 8px;
 
+    @media (max-width: ($menu-desktop-width - 1)) {
+      &:first-child {
+        margin-top: 8px;
+      }
+      &:last-child {
+        margin-top: 8px;
+      }
+    }
+
     &--active {
 
       & > #{$block-name}__link {
         color: #000;
+
+        @media (max-width: ($menu-desktop-width - 1)) {
+          color: #ccc;
+        }
       }
     }
   }
@@ -85,10 +106,16 @@ $transition-time:             0.3s !default;
     font-size: 16px;
     line-height: 18px;
 
+    @media (max-width: ($menu-desktop-width - 1)) {
+      font-size: 22px;
+      font-weight: 700;
+      padding: 1em 15px;
+    }
+
     &:hover,
     &:focus {
       text-decoration: none;
-      background-color: $gray-lightest;
+      background-color: hsl(0, 0%, 30%);
     }
 
     &--lvl-2 {
@@ -164,6 +191,7 @@ $transition-time:             0.3s !default;
     padding: 0;
     background: none;
     border: none;
+    margin-left: 15px;
 
     .no-js & {
       display: none;

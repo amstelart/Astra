@@ -17,6 +17,7 @@
 .main-intro {
   min-height: 980px;
   background-image: url(../img/main-intro-image.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 
@@ -66,28 +67,24 @@
 
 .page-intro {
   overflow: hidden;
-  min-height: 635px;
+  min-height: 630px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  display: flex;
+  align-items: center;
 
   @media (max-width:$screen-lg) {
     min-height: 465px;
   }
 
   &__inner {
-    padding-top: 220px;
-
-    @media (max-width:$screen-lg) {
-      padding-top: 120px;
-      padding-bottom: 120px;
-    }
+    padding-top: 120px;
+    padding-bottom: 120px;
 
     h1 {
       max-width: 820px;
-      // font-weight: 700;
-      // font-size: 72px;
-      // line-height: 83px;
+      margin-top: 0;
       margin-bottom: 0;
     }
     p {
@@ -98,6 +95,25 @@
     }
     .btn {
       margin-top: 140px;
+    }
+  }
+
+  &--react {
+
+    .container {
+      background-image: url(../img/react-big-logo.png);
+      background-repeat: no-repeat;
+      background-position: center right;
+
+      @media (max-width: $screen-lg) {
+        background-image: none;
+      }
+    }
+
+    .page-intro__inner {
+      h1 {
+        line-height: 1.1;
+      }
     }
   }
 }
@@ -118,6 +134,7 @@
 
 .brain {
   padding: 120px 0;
+  position: relative;
 
   @media (max-width: $screen-lg) {
     padding: 60px 0;

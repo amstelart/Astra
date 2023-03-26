@@ -31,9 +31,72 @@
 
     main {
       padding-bottom: 90px;
+      position: relative;
 
       @media (max-width: $screen-lg) {
         padding-bottom: 40px;
+      }
+
+      section {
+        position: relative;
+        z-index: 2;
+      }
+
+      .svg-bg {
+        position: absolute;
+        // top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        &--main {
+          background-image: url(../img/ellipse-main.svg);
+          // background-position: center top;
+        }
+
+        &--services {
+          background-image: url(../img/ellipse-services.svg);
+          background-position: center bottom;
+        }
+
+        &--web-app-dev {
+          background-image: url(../img/ellipse-web-app-dev.svg);
+          background-position: center bottom;
+        }
+
+        &--mobile-app-dev {
+          background-image: url(../img/ellipse-mobile-app-dev.svg);
+          background-position: center bottom;
+        }
+
+        &--website-dev {
+          background-image: url(../img/ellipse-website-dev.svg);
+          background-position: center bottom;
+        }
+
+        &--branding {
+          background-image: url(../img/ellipse-branding.svg);
+          background-position: center bottom;
+        }
+
+        &--about {
+          background-image: url(../img/ellipse-about.svg);
+          background-position: center bottom;
+        }
+
+        &--technologies {
+          background-image: url(../img/ellipse-about.svg);
+          background-position: center bottom;
+        }
+
+        &--react {
+          background-image: url(../img/ellipse-react.svg);
+          background-position: center bottom;
+        }
       }
     }
   }
