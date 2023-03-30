@@ -11,6 +11,22 @@
   background-image: url(../img/ellipse-footer.svg);
   background-repeat: no-repeat;
   background-position: left bottom;
+  position: relative;
+
+  .container {
+    position: relative;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-image: url(../img/noise.png);
+    opacity: 0.25;
+  }
 
   &__row  {
     @include row;
@@ -24,7 +40,8 @@
   &__line {
     height: 1px;
     width: 100%;
-    background: #4D32F4;
+    background: linear-gradient(249.13deg, #4D32F4 0%, #FA00FF 98.09%);
+    opacity: 0.55;
     margin: 27px 0;
   }
 

@@ -53,6 +53,17 @@
         background-repeat: no-repeat;
         background-size: cover;
 
+        &::before {
+          content: "";
+          background-image: url(../img/noise.png);
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          opacity: 0.25;
+        }
+
         &--main {
           background-image: url(../img/ellipse-main.svg);
           // background-position: center top;

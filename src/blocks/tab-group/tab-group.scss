@@ -15,8 +15,6 @@
 
 .tab-group__tab-ul {
   list-style: none;
-  background: rgba(44, 32, 120, 0.5);
-  border-radius: 10px;
   align-items: flex-end;
   flex-wrap: nowrap;
   justify-content: center;
@@ -31,8 +29,22 @@
 }
 
 .tab-group__tab-li {
-  flex: 0 1 auto;
+  flex: 0 0 25%;
+  max-width: 25%;
   margin: 0;
+
+  &:first-child {
+    .tab-group__tab-btn:after {
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+    }
+  }
+  &:last-child {
+    .tab-group__tab-btn:after {
+      border-top-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+    }
+  }
 
   &:not(:last-child) {
     border-right: 1px solid #4D32F4;
@@ -40,6 +52,7 @@
 
   @media (max-width: $screen-lg) {
     flex: 0 0 50%;
+    max-width: 50%;border: 1px solid;
 
     &:nth-child(1) {
       border-bottom: 1px solid #4D32F4;
@@ -53,9 +66,7 @@
 
 .tab-group__tab-btn {
   background-color: transparent;
-  border-color: transparent;
-  border-radius: 0;
-  border-width: 0 0 0.3rem 0;
+  border: none;
   color: #71717A;
   font-size: 0.9rem;
   margin: 0;
@@ -64,9 +75,23 @@
   min-width: 5rem;
   width: 100%;
   cursor: pointer;
+  position: relative;
+
+  &:after {
+    content: "";
+    background: rgba(44, 32, 120, 0.5);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
 }
 .tab-group__tab-icon {
   margin-bottom: 17px;
+  position: relative;
+  z-index: 1;
   svg {
     fill: #71717A;
   }
@@ -75,6 +100,8 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 18px;
+  position: relative;
+  z-index: 1;
 }
 .tab-group__tab-btn:focus, .tab-group__tab-btn:hover {
   // color: #202020;
@@ -84,9 +111,6 @@
 }
 
 .tab-group__tabpanel {
-  // border-color: #e0dddd;
-  // border-style: solid;
-  // border-width: 0 0.05rem 0.05rem 0.05rem;
 }
 
 .tab-group__tab-content {
@@ -105,7 +129,20 @@
 }
 
 .tab-group__tab-btn_selected {
-  border-color: #FA00FF;
+  position: relative;
+
+  &:before {
+    content: "";
+    bottom: -6px;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    position: absolute;
+    width: 80%;
+    height: 11px;
+    background: linear-gradient(249.13deg, #4D32F4 0%, #FA00FF 98.09%);
+    border-radius: 20px;
+  }
   color: #fff;
 
   .tab-group__tab-icon {
