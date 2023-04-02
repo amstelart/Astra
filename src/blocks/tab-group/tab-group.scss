@@ -53,6 +53,7 @@
   @media (max-width: $screen-lg) {
     flex: 0 0 50%;
     max-width: 50%;border: 1px solid;
+    border: none;
 
     &:nth-child(1) {
       border-bottom: 1px solid #4D32F4;

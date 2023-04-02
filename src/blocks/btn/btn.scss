@@ -16,10 +16,10 @@ $border-radius:               15px;
 
   $block-name:                &; // #{$block-name}__element
 
-  box-sizing: border-box;
+  // box-sizing: border-box;
   display: inline-block;
   margin: 0;
-  padding: 20px  $field-padding-horizontal;
+  padding: 20px 60px;
   white-space: nowrap;
   vertical-align: middle;
   user-select: none;
@@ -34,6 +34,7 @@ $border-radius:               15px;
   border: 1px solid $gray-lighter;
   background-color: $gray-lightest;
   background-image: none;
+  transition: all 0.8s, color 0.3s 0.3s;
   cursor: pointer;
 
   @media (max-width: $screen-lg) {
@@ -73,14 +74,14 @@ $border-radius:               15px;
 
   &--violet {
     color: #fff;
-    background-color: $color-violet;
-    border: 1px solid $color-violet;
+    background: $color-violet;
+    border: none;
 
     &:hover,
     &:focus {
       color: #fff;
-      background-color: darken($color-violet, 10%);
-      border-color: darken($color-violet, 12%);
+      background: $color-violet;
+      box-shadow: 700px 0 0 0 rgba(0, 0, 0, 0.25) inset, -700px 0 0 0 rgba(0, 0, 0, 0.25) inset;
     }
 
     &--disabled,
@@ -98,9 +99,10 @@ $border-radius:               15px;
 
     &:hover,
     &:focus {
-      color: #fff;
-      background-color: transparent;
-      border-color: darken(#fff, 12%);
+      color: #000;
+      background-color: #fff;
+      border-color: #fff;
+      box-shadow: 700px 0 0 0 rgba(0, 0, 0, 0.15) inset, -700px 0 0 0 rgba(0, 0, 0, 0.15) inset;
     }
 
     &--disabled,
