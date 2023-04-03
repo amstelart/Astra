@@ -1,6 +1,9 @@
 // Если на проекте jQuery
 $( document ).ready(function() {
   // code
+
+  AOS.init();
+
   $('.accordion-group').ariaAccordion({});
 
   $('.tab-group').ariaTabs({});

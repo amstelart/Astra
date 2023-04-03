@@ -1000,3 +1000,44 @@
     }
   }
 }
+
+.running-header {
+  position: relative;
+  overflow: hidden;
+  font-weight: 700;
+  font-size: 500px;
+  line-height: 1.05;
+  height: 510px;
+  display: flex;
+
+  .container {
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.running-text {
+  white-space: nowrap;
+  color: #FFFFFF;
+  opacity: 0.15;
+  position: absolute;
+  left: 0;
+  top: 0;
+  animation: move 25s linear infinite alternate;
+  padding-bottom: 40px;
+}
+
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-40%);
+  }
+}
+
+.anim-text {
+  overflow: hidden;
+}
