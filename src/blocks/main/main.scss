@@ -942,3 +942,61 @@
   text-align: center;
   padding: 120px 35px;
 }
+
+.stats-num-card {
+  background: #0F0F15;
+  border-radius: 20px;
+  color: #fff;
+  padding: 45px 60px 90px 60px;
+  text-align: center;
+  height: 100%;
+
+  position: relative;
+
+  &:before {
+    background: radial-gradient( 550px circle at var(--mouse-x) var(--mouse-y), #2A87C5, #8716c1, #FD79C0, transparent 50% );
+    z-index: -1;
+    padding: 2px;
+    left: -2px;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    zoom: 1 !important;
+    opacity: 0.7;
+    border-radius: 21px;
+    content: "";
+    position: absolute;
+    transition: opacity 500ms;
+  }
+
+  &:hover::before {
+    opacity: 1;
+  }
+
+  @media (max-width: $screen-xl) {
+    padding: 30px 30px 60px 30px;
+  }
+
+  &__num {
+    font-weight: 700;
+    font-size: 128px;
+    line-height: 147px;
+
+    @media (max-width: $screen-xl) {
+      font-size: 102px;
+      line-height: 1.2;
+    }
+  }
+
+  &__name {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 37px;
+    color: #D4D4D4;
+
+    @media (max-width: $screen-xl) {
+      font-size: 24px;
+      line-height: 1.3;
+    }
+  }
+}
