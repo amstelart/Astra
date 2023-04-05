@@ -35,7 +35,7 @@
 
     h1 {
       max-width: 820px;
-      // font-weight: 700;
+      line-height: 1.1;
       // font-size: 72px;
       // line-height: 83px;
 
@@ -1025,16 +1025,17 @@
   position: absolute;
   left: 0;
   top: 0;
-  animation: move 25s linear infinite alternate;
+  animation: move 25s infinite linear;
   padding-bottom: 40px;
+  text-transform: uppercase;
 }
 
 @keyframes move {
-  from {
-    transform: translateX(0);
+  0% {
+    transform: translateX(100%);
   }
-  to {
-    transform: translateX(-40%);
+  100% {
+    transform: translateX(-100%);
   }
 }
 

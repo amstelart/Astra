@@ -87,7 +87,9 @@ $transition-time:             0.3s !default;
     &--active {
 
       & > #{$block-name}__link {
-        color: #000;
+        color: #fff;
+        font-weight: 700;
+        text-decoration: underline;
 
         @media (max-width: ($menu-desktop-width - 1)) {
           color: #ccc;
@@ -112,11 +114,11 @@ $transition-time:             0.3s !default;
       padding: 1em 15px;
     }
 
-    &:hover,
-    &:focus {
-      text-decoration: none;
-      background-color: hsl(0, 0%, 30%);
-    }
+    // &:hover,
+    // &:focus {
+    //   text-decoration: none;
+    //   background-color: hsl(0, 0%, 30%);
+    // }
 
     &--lvl-2 {
 
