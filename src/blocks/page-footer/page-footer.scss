@@ -51,7 +51,10 @@
     line-height: 21px;
 
     &.email-link {
-      text-align: right;
+
+      @media (min-width: $screen-lg) {
+        text-align: right;
+      }
 
       a {
         font-weight: 700;
