@@ -14,6 +14,19 @@
   }
 }
 
+.desktop-visible {
+  display: none !important;
+  @media (min-width: $screen-lg) {
+    display: flex !important;
+  }
+}
+.mobile-visible {
+  display: block !important;
+  @media (min-width: $screen-lg) {
+    display: none !important;
+  }
+}
+
 .main-intro {
   min-height: 980px;
   background-image: url(../img/main-intro-image.jpg);
