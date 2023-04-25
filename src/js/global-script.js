@@ -19,6 +19,37 @@ $( document ).ready(function() {
     contentClass: 'v-tab-group__tab-content',
     btnSelectedClass: 'v-tab-group__tab-btn_selected'
   });
+
+  $("#carousel-project").owlCarousel({
+    items: 3,
+    nav: true,
+    navText: ["<div class='nav-button owl-prev'><span></span>Prev</div>", "<div class='nav-button owl-next'>Next<span></span></div>"],
+    loop: true,
+    center: false,
+    responsive : {
+      0 : {
+        items: 1,
+        nav: true,
+        loop: true,
+        center: true,
+      },
+      480 : {
+        items: 1,
+      },
+      768 : {
+        items: 1,
+      },
+      992 : {
+        items: 2,
+      },
+      1200 : {
+        items: 2,
+      },
+      1800 : {
+        items: 2,
+      }
+    }
+  });
 });
 
 // Изоляция без jQuery
