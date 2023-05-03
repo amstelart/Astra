@@ -139,6 +139,7 @@ $transition-time:             0.3s !default;
 
     background: rgba(44, 32, 120, 0.5);
     backdrop-filter: blur(54px);
+    will-change: transform;
 
     @media (max-width: ($menu-desktop-width - 1)) {
       background: rgba(44, 32, 120, 0.2);
