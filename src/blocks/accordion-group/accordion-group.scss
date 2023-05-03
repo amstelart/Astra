@@ -29,7 +29,7 @@
   background: transparent;
   border: none;
   display: block;
-  padding: 25px 60px;
+  padding: 25px 95px 25px 60px;
   color: #fff;
   text-align: left;
   width: 100%;
@@ -41,8 +41,8 @@
     font-size: 32px;
   }
   @media (max-width:$screen-md) {
-    padding: 15px 25px;
-    font-size: 22px !important;
+    padding: 15px 65px 15px 25px;
+    font-size: 18px !important;
   }
 
   &:before {

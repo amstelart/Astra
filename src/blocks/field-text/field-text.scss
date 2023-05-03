@@ -25,6 +25,10 @@ $border-radius:               10px;
     margin-bottom: 22px;
   }
 
+  @media (max-width: $screen-sm) {
+    margin-bottom: 15px !important;
+  }
+
   &__name {
     @include field-name;
   }
@@ -52,6 +56,11 @@ $border-radius:               10px;
 
     @media (max-width: $screen-lg) {
       height: 64px;
+      padding: 15px;
+    }
+
+    @media (max-width: $screen-sm) {
+      height: 48px !important;
     }
 
     &:focus {
@@ -90,6 +99,13 @@ $border-radius:               10px;
       height: auto;
       min-height: calc(#{$textarea-height} + 2px);
       resize: vertical;
+      padding: 20px 20px;
+
+      @media (max-width: $screen-sm) {
+        padding: 15px;
+        margin-bottom: 15px !important;
+        min-height: 200px;
+      }
     }
   }
 
