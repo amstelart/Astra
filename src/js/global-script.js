@@ -20,6 +20,18 @@ $( document ).ready(function() {
     btnSelectedClass: 'v-tab-group__tab-btn_selected'
   });
 
+  $('.brief-box').ariaTabs({
+    tabGroupIdPrefix: 'brief-box--',
+    navClass: 'brief-box__tab-nav',
+    listClass: 'brief-box__tab-ul',
+    listItemClass: 'brief-box__tab-li',
+    btnClass: 'brief-box__tab-btn',
+    panelsContainerClass: 'brief-box__tabs-cont',
+    panelClass: 'brief-box__tabpanel',
+    contentClass: 'brief-box__tab-content',
+    btnSelectedClass: 'brief-box__tab-btn_selected'
+  });
+
   $("#carousel-project").owlCarousel({
     items: 3,
     nav: true,

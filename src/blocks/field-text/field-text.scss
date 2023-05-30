@@ -112,4 +112,19 @@ $border-radius:               10px;
   &__help-text {
     @include field-help-text;
   }
+
+  &--brief {
+
+    .field-text__input {
+      height: 64px;
+      padding: 15px;
+    }
+
+    textarea.field-text__input {
+      &::placeholder {
+        font-size: 14px;
+        line-height: 1.2;
+      }
+    }
+  }
 }

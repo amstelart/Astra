@@ -6,6 +6,49 @@
 
   $block-name:                &; // #{$block-name}__element
 
+  &--brief {
+    #{$block-name}__tab-ul {
+
+      margin-bottom: 40px;
+
+      @media (min-width: $screen-lg) {
+        margin-bottom: 110px;
+      }
+    }
+    #{$block-name}__tab-li {
+      flex: 0 0 100%;
+      max-width: 100%;
+      margin-bottom: 10px;
+
+      @media (max-width: $screen-md) {
+        border-right: none;
+        border-bottom: 1px solid #4D32F4;
+
+        .tab-group__tab-btn:after {
+          border-radius: 10px 10px 0 0;
+        }
+      }
+
+      @media (min-width: $screen-md) {
+        flex: 0 0 33.333%;
+        max-width: 33.333%;
+      }
+    }
+
+    #{$block-name}__tabpanel {
+      background: rgba(44, 32, 120, 0.5);
+      backdrop-filter: blur(5px);
+      border-radius: 20px;
+    }
+
+    #{$block-name}__tab-content {
+      padding: 56px;
+
+      @media (max-width: $screen-md) {
+        padding: 35px 15px;
+      }
+    }
+  }
 }
 
 .tab-group {

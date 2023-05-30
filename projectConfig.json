@@ -58,7 +58,10 @@
     "main": [],
     "accordion-group": [],
     "tab-group": [],
-    "v-tab-group": []
+    "v-tab-group": [],
+    "brief-box": [],
+    "field-checkbox-img": [],
+    "field-radio-img": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

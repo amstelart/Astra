@@ -218,6 +218,21 @@
       }
     }
   }
+
+  &--brief {
+    min-height: auto;
+
+    .page-intro__inner {
+      padding-top: 160px;
+      padding-bottom: 60px;
+      text-align: center;
+      max-width: auto;
+    }
+
+    .page-intro__inner h1 {
+      max-width: inherit;
+    }
+  }
 }
 
 .page-box {
